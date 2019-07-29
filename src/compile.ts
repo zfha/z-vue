@@ -38,7 +38,6 @@ export default class Compile {
     Array.from(attrs).map(attr => {
       let attrbuteName = attr.name;
       if (this.isDirective(attrbuteName)) {
-        console.log('============');
         let exp = attr.value;
         let [, type] = attrbuteName.split('-');
         ContextUtil.model(node, this.vm, exp);

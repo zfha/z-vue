@@ -40,7 +40,6 @@ export default class ZContext {
     return sections.reduce((prev: any, next: string, currentIndex: number) => {
       // 依次获取属性里面的值
       if (currentIndex === sections.length - 1) {
-        console.log('next', prev[next], val);
         return (prev[next] = val);
       }
       // 继续归并
