@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MVVM</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 双向数据绑定 靠的是表单 -->
+      <input type="text" z-model="message" />
+      <div>{{ message }}</div>
+      <ul>
+        <li>{{ message }}</li>
+      </ul>
+      {{ message }}
+    </div>
+    <!-- 引入依赖的 js 文件 -->
+    <script>
+      let vm = new ZVue({
+        el: '#app',
+        data: {
+          message: 'hello world!'
+        }
+      });
+    </script>
+  </body>
+</html>
